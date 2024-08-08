@@ -592,9 +592,11 @@ pub struct StateData {
     pub swap_acc_pc_fee: u64,
 
     /// swap pc in amount
-    pub swap_pc_in_amount: u128,
+    pub swap_pc_in_amount: u64,
+    pub swap_pc_in_amount1: u64,
     /// swap coin out amount
-    pub swap_coin_out_amount: u128,
+    pub swap_coin_out_amount: u64,
+    pub swap_coin_out_amount1: u64,
     /// charge coin as swap fee while swap coin to pc
     pub swap_acc_coin_fee: u64,
 }
@@ -611,8 +613,10 @@ impl StateData {
         self.swap_coin_in_amount = 0u128;
         self.swap_pc_out_amount = 0u128;
         self.swap_acc_pc_fee = 0u64;
-        self.swap_pc_in_amount = 0u128;
-        self.swap_coin_out_amount = 0u128;
+        self.swap_pc_in_amount = 0u64;
+        self.swap_pc_in_amount1 = 0u64;
+        self.swap_coin_out_amount = 0u64;
+        self.swap_coin_out_amount1 = 0u64;
         self.swap_acc_coin_fee = 0u64;
 
         Ok(())
